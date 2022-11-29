@@ -45,9 +45,9 @@ class AuthorController extends Controller
     return redirect('/');
   }
   // 追記：ここまで
-}
 
- // 追記：ここから
+
+  // 追記：ここから
   public function edit(Request $request)
   {
     $author = Author::find($request->id);
@@ -63,3 +63,6 @@ class AuthorController extends Controller
   }
   // 追記：ここまで
 }
+
+
+// aaaaaaa//

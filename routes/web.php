@@ -20,4 +20,3 @@ Route::get('/edit', [AuthorController::class, 'edit']);
 Route::post('/edit', [AuthorController::class, 'update']);
 // 追記：ここまで
 
-aiueo
