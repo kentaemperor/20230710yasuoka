@@ -62,7 +62,20 @@ class AuthorController extends Controller
     return redirect('/');
   }
   // 追記：ここまで
+
+
+// 追記：ここから
+  public function delete(Request $request)
+  {
+    $author = Author::find($request->id);
+    return view('delete', ['form' => $author]);
+  }
+
+  public function remove(Request $request)
+  {
+    Author::find($request->id)->delete();
+    return redirect('/');
+  }
+  // 追記：ここまで
 }
 
-
-// aaaaaaa//

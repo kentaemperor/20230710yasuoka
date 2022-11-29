@@ -20,3 +20,7 @@ Route::get('/edit', [AuthorController::class, 'edit']);
 Route::post('/edit', [AuthorController::class, 'update']);
 // 追記：ここまで
 
+// 追記：ここから
+Route::get('/delete', [AuthorController::class, 'delete']);
+Route::post('/delete', [AuthorController::class, 'remove']);
+// 追記：ここまで
