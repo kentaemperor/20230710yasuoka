@@ -64,7 +64,7 @@ class AuthorController extends Controller
   // 追記：ここまで
 
 
-// 追記：ここから
+ // 追記：ここから
   public function delete(Request $request)
   {
     $author = Author::find($request->id);
@@ -76,6 +76,17 @@ class AuthorController extends Controller
     Author::find($request->id)->delete();
     return redirect('/');
   }
-  // 追記：ここまで
-}
+   // 追記：ここまで
 
+
+   public function delete(Request $request)
+	  {
+	    $author = Author::find($request->id);
+        dd($author)
+  	    return view('delete', ['form' => $author]);
+	  }
+
+  
+  }
+
+     
