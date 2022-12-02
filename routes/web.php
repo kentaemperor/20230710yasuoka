@@ -24,3 +24,5 @@ Route::post('/edit', [AuthorController::class, 'update']);
 Route::get('/delete', [AuthorController::class, 'delete']);
 Route::post('/delete', [AuthorController::class, 'remove']);
 // 追記：ここまで
+
+Route::get('/author/{author}', [AuthorController::class, 'bind']);
