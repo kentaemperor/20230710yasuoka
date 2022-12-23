@@ -8,9 +8,10 @@
 </head>
 <body>
 
-<h1>Todo List</h1>
+  
+  <h1>Todo List</h1>
 
-<form action="/todos/create" method="post">
+  <form action="/todos/create" method="post">
   @csrf
   <input type="text" name="content" >
 
@@ -25,6 +26,10 @@
 <th>削除</th>
 
 </table>
+
+@foreach ($todos as $todo)
+  <p>{{$todo->}}</p>
+  @endforeach
 
 
 </body>

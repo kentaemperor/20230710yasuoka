@@ -7,8 +7,10 @@ use Illuminate\Http\Request;
 class TodoController extends Controller
 
 {
-    public function index()
-    {
-    return "Todo";
-  }
+public function index()
+
+{
+   $todos = Todo::all();
+    return view('index', ['todos' => $todos]);
+}
 }
