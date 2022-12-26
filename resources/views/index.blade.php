@@ -28,7 +28,7 @@
 </table>
 
 @foreach ($todos as $todo)
-  <p>{{$todo->}}</p>
+  <p>{{$todo->content}}</p>
   @endforeach
 
 
