@@ -5,10 +5,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link rel="stylesheet" href="/css/style.css" >
 </head>
 <body>
 
-  
+<div class="todo">
+
   <h1>Todo List</h1>
 
   <form action="/todos/create" method="post">
@@ -17,20 +19,21 @@
 
   <button type="button" name="name">追加</button>
 
-</form>
+ </form>
 
-<table>
-<th>作成日</th>
-<th>タスク名</th>
-<th>更新</th>
-<th>削除</th>
+ <table>
+ <th>作成日</th>
+ <th>タスク名</th>
+ <th>更新</th>
+ <th>削除</th>
+ 
+ </table>
 
-</table>
-
-@foreach ($todos as $todo)
+ @foreach ($todos as $todo)
   <p>{{$todo->content}}</p>
   @endforeach
 
+</div>
 
 </body>
 </html>
