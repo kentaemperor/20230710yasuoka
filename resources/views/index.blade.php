@@ -29,6 +29,8 @@
 
         <div class="Todo-table">      
 
+        <table class="Todo">
+
          <table>
          <tr>
             <th>作成日</th>
@@ -102,6 +104,8 @@
           <p>{{$todo->content}}</p>
           @endforeach
 
+
+        </table>
         </div>
       </div>
     </div>

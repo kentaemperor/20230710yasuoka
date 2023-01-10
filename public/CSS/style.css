@@ -44,12 +44,22 @@
   height: 50px;
 }
 
+
+
 .Todo-table {
   text-align: center;
   width: 100%;
   border-collapse: collapse;
 
 }
+
+
+.Todo{
+margin: 0 auto;
+width: 120px;
+
+}
+
 
 .input-update {
   width: 90%;
