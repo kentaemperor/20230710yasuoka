@@ -27,7 +27,9 @@
               <input class="button-add" type="submit" value="追加"></input> 
 
 
-        <table>
+        <div class="Todo-table">      
+
+         <table>
          <tr>
             <th>作成日</th>
             <th>タスク名</th>
@@ -99,6 +101,8 @@
           @foreach ($todos as $todo)
           <p>{{$todo->content}}</p>
           @endforeach
+
+        </div>
       </div>
     </div>
   </div>
