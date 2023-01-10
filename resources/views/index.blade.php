@@ -96,8 +96,7 @@
 
           </tr>
 
-          </body>
-
+          
           </table>
 
           @foreach ($todos as $todo)
@@ -105,8 +104,10 @@
           @endforeach
 
 
-        </table>
+        
         </div>
+        </body>
+
       </div>
     </div>
   </div>

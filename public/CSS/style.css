@@ -47,8 +47,8 @@
 
 
 .Todo-table {
-  text-align: center;
-  width: 100%;
+  margin: 0 auto;
+  width: 80%;
   border-collapse: collapse;
 
 }
