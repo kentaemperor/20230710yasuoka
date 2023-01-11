@@ -31,7 +31,7 @@
 
         <table class="Todo">
 
-         <table>
+        <table>
          <tr>
             <th>作成日</th>
             <th>タスク名</th>
@@ -40,7 +40,7 @@
           </tr>
 
 
-           <tr>
+         <tr>
             <td>
               2023-01-02 08:52:14
             </td>
@@ -65,7 +65,7 @@
               
             </td>
 
-          </tr>
+           </tr>
 
           <tr>
 
@@ -73,9 +73,9 @@
               2023-01-04 05:17:11
             </td>
 
-            <td>
+              <td>
 
-             <input type="hidden" name="_token" value=""> 
+                <input type="hidden" name="_token" value=""> 
 
                 <input type="text" class="input-update" value="" name="content">
 
@@ -99,6 +99,9 @@
           
           </table>
 
+          </table>
+
+
           @foreach ($todos as $todo)
           <p>{{$todo->content}}</p>
           @endforeach
@@ -106,7 +109,7 @@
 
         
         </div>
-        </body>
+        
 
       </div>
     </div>
