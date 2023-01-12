@@ -32,7 +32,7 @@
 
         <table class="Todo">
 
-        <table>
+        
          <tr>
             <th>作成日</th>
             <th>タスク名</th>
@@ -98,9 +98,9 @@
           </tr>
 
           
-          </table>
+          
 
-          </table>
+          
 
 
           @foreach ($todos as $todo)
