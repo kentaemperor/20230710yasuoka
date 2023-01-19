@@ -40,6 +40,17 @@
             <th>削除</th>
           </tr>
 
+          @foreach ($todos as $todo)
+
+           <tr>
+    <td>{{$todo->id}}</td>
+    <td>{{$todo->content}}</td>
+    <td>{{$$todo->created_at}}</td>
+    <td>{{$todo->updated_at}}</td>
+  </tr>
+
+         @endforeach
+
 
          <tr>
             <td>
@@ -50,7 +61,7 @@
 
               <input type="hidden" name="_token" value="">
 
-               <td>
+              <td>
                 <input type="text" class="input-update" value="" name="content">
               </td>
 
@@ -58,15 +69,15 @@
                 <button class="button-update">更新</button>
               </td>
             
-            <td>
+             <td>
               
                 <input type="hidden" name="_token" value="">     
                 
                 <button class="button-delete">削除</button>
               
-            </td>
+             </td>
 
-           </tr>
+          </tr>
 
           <tr>
 
@@ -86,32 +97,27 @@
                 <button class="button-update">更新</button>
               </td>
             
-            <td>
+              <td>
 
               
                 <input type="hidden" name="_token" value="">
 
                 <button class="button-delete">削除</button>
               
-            </td>
+              </td>
 
           </tr>
 
-</table> 
-          
 
-          
+                  </table> 
+      
 
-
-          @foreach ($todos as $todo)
+                    @foreach ($todos as $todo)
           <p>{{$todo->content}}</p>
           @endforeach
-
-
-        
+      
         </div>
         
-
       </div>
     </div>
   </div>
