@@ -15,10 +15,11 @@
   <div class="container">
 
     <div class="card">
+      
 
       <h1 class="title">Todo List</h1>
 
-            <div class="todo">
+              <div class="todo">
 
             <form action="/todos/create" method="post">
            @csrf
@@ -32,33 +33,29 @@
 
         <table class="Todo">
 
-        
-         <tr>
-            <th>作成日</th>
-            <th>タスク名</th>
-            <th>更新</th>
-            <th>削除</th>
-          </tr>
+             <tr>
+                <th>作成日</th>
+                <th>タスク名</th>
+                <th>更新</th>
+                <th>削除</th>
+             </tr>
 
           @foreach ($todos as $todo)
 
-           <tr>
-    <td>{{$todo->id}}</td>
-    <td>{{$todo->content}}</td>
-    <td>{{$$todo->created_at}}</td>
-    <td>{{$todo->updated_at}}</td>
-  </tr>
+            <tr>
+              <td>{{$todo->id}}</td>
+              <td>{{$todo->content}}</td>
+              <td>{{$$todo->created_at}}</td>
+              <td>{{$todo->updated_at}}</td>
+             </tr>
 
          @endforeach
-
 
          <tr>
             <td>
               2023-01-02 08:52:14
             </td>
-
-            
-
+        
               <input type="hidden" name="_token" value="">
 
               <td>
@@ -98,8 +95,6 @@
               </td>
             
               <td>
-
-              
                 <input type="hidden" name="_token" value="">
 
                 <button class="button-delete">削除</button>
@@ -108,8 +103,7 @@
 
           </tr>
 
-
-                  </table> 
+        </table> 
       
 
                     @foreach ($todos as $todo)
