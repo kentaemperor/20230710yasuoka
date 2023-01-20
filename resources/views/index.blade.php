@@ -9,56 +9,50 @@
 </head>
 
 <body>
-
-
-
   <div class="container">
     <div class="card">
-      
       <h1 class="title">Todo List</h1>
       <div class="todo">
         <form action="/todos/create" method="post">
-              @csrf
-              <input type="text" class="input-add" name="content"></input> 
-              <input class="button-add" type="submit" value="追加"></input> 
-
-              <div class="Todo-table">      
-                <table class="Todo">
-                 <tr>
-                    <th>作成日</th>
-                    <th>タスク名</th>
-                    <th>更新</th>
-                    <th>削除</th>
-                  </tr>
-
-                 @foreach ($todos as $todo)
-
-                  <tr>
-                    <td>{{$todo->id}}</td>
-                    <td>{{$todo->content}}</td>
-                    <td>{{$$todo->created_at}}</td>
-                    <td>{{$todo->updated_at}}</td>
-                  </tr>
-
-                   @endforeach
-
-
-                </table> 
-      
-                    @foreach ($todos as $todo)
-                   <p>{{$todo->content}}</p>
-                    @endforeach
-
-              </div>
-
-      
+          @csrf
+          <input type="text" class="input-add" name="content"></input>
+          <input class="button-add" type="submit" value="追加"></input>
         </form>
-        
       </div>
+
+      <table class="Todo">
+        <tr>
+          <th>作成日</th>
+          <th>タスク名</th>
+          <th>更新</th>
+          <th>削除</th>
+        </tr>
+        @foreach ($todos as $todo)
+        <tr>
+          <td>{{$todo->id}}</td>
+          <td>{{$todo->content}}</td>
+          <td>{{$$todo->created_at}}</td>
+          <td>{{$todo->updated_at}}</td>
+        </tr>
+        @endforeach
+         <tr>
+            <td>
+              
+              <input type="hidden" name="_token" value=""></input> 
+            <td>
+             <input type="text" class="input-update" value="" name="content">
+            </td>
+            <td>
+              <button class="button-update">更新</button>
+            </td>            
+            <td>
+             <input type="hidden" name="_token" value=""></input>    
+             <button class="button-delete">削除</button>
+            </td>
+         </tr>
+      </table>
     </div>
   </div>
-
 </body>
 
 </html>
-
