@@ -14,11 +14,10 @@ public function index()
     return view('index', ['todos' => $todos]);
 }
 
-public function update(TodoRequest $request)
+public function create(TodoRequest $request)
   {
     $form = $request->all();
-    unset($form['_token']);
-    Todo::where('id', $request->id)->update($form);
+    Todo::create($form);
     return redirect('/');
   }
 }

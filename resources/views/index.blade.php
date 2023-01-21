@@ -15,8 +15,8 @@
       <div class="todo">
         <form action="/todos/create" method="post">
           @csrf
-          <input type="text" class="input-add" name="content"></input>
-          <input class="button-add" type="submit" value="追加"></input>
+          <input type="text" class="input-add" name="content">
+          <input class="button-add" type="submit" value="追加">
         </form>
       </div>
 
@@ -38,7 +38,7 @@
          <tr>
             <td>
               
-              <input type="hidden" name="_token" value=""></input> 
+              <input type="hidden" name="" value="">
             <td>
              <input type="text" class="input-update" value="" name="content">
             </td>
@@ -46,7 +46,7 @@
               <button class="button-update">更新</button>
             </td>            
             <td>
-             <input type="hidden" name="_token" value=""></input>    
+             <input type="hidden" name="" value="">  
              <button class="button-delete">削除</button>
             </td>
          </tr>
