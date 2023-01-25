@@ -24,14 +24,16 @@
         <tr>
           <th>作成日</th>
           <th>タスク名</th>
+            <td>{{$todo->content}}</td>
           <th>更新</th>
+            <td>{{$todo->created_at}}</td>
           <th>削除</th>
         </tr>
         @foreach ($todos as $todo)
         <tr>
           <td>{{$todo->id}}</td>
-          <td>{{$todo->content}}</td>
-          <td>{{$todo->created_at}}</td>
+          
+          
           <td>{{$todo->updated_at}}</td>
         </tr>
         @endforeach
