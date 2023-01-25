@@ -38,6 +38,8 @@
   cursor: pointer;
   transition: 0.4s;
 
+  margin-left: 30px;
+
 }
 
 .tr {
@@ -72,6 +74,7 @@ width: 100%;
 
 .button-update {
   text-align: left;
+  
   border: 2px solid #fa9770;
   background-color: #fff;
   font-weight: bold;
@@ -79,6 +82,7 @@ width: 100%;
   border-radius: 5px;
   cursor: pointer;
   transition: 0.4s;
+  
 
 }
 

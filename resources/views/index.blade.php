@@ -31,17 +31,17 @@
         <tr>
           <td>{{$todo->id}}</td>
           <td>{{$todo->content}}</td>
-          <td>{{$$todo->created_at}}</td>
+          <td>{{$todo->created_at}}</td>
           <td>{{$todo->updated_at}}</td>
         </tr>
         @endforeach
          <tr>
-            <td>
-              
+            <td>              
               <input type="hidden" name="" value="">
-            <td>
-             <input type="text" class="input-update" value="" name="content">
             </td>
+              <td>
+               <input type="text" class="input-update" value="" name="content">
+              </td>
             <td>
               <button class="button-update">更新</button>
             </td>            
