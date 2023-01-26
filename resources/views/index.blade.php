@@ -23,20 +23,20 @@
       <table class="Todo">
         <tr>
           <th>作成日</th>
-          <th>タスク名</th>
-            <td>{{$todo->content}}</td>
-          <th>更新</th>
-            <td>{{$todo->created_at}}</td>
+          <th>タスク名</th>            
+          <th>更新</th>            
           <th>削除</th>
         </tr>
+
         @foreach ($todos as $todo)
         <tr>
-          <td>{{$todo->id}}</td>
-          
-          
-          <td>{{$todo->updated_at}}</td>
+          <td>投稿のidを表示</td>
+          <td>投稿のタスク名を表示</td>
+          <td>投稿の作成日を表示</td>
+          <td>投稿の更新日を表示</td>
         </tr>
         @endforeach
+
          <tr>
             <td>              
               <input type="hidden" name="" value="">
@@ -45,13 +45,15 @@
                <input type="text" class="input-update" value="" name="content">
               </td>
             <td>
+              <input type="submit" name="" value="">
               <button class="button-update">更新</button>
             </td>            
             <td>
-             <input type="hidden" name="" value="">  
+             <input type="submit" name="" value="">  
              <button class="button-delete">削除</button>
             </td>
          </tr>
+         
       </table>
     </div>
   </div>
