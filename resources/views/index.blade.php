@@ -29,32 +29,30 @@
         </tr>
 
         @foreach ($todos as $todo)
-        <tr>
-          <td>{{$todo->created_at}}</td>
-          <td>{{$todo->content}}</td>
-          <td>更新ボタン</td>
-          <td>削除ボタン</td>
-        </tr>
-        @endforeach
+        
+          <tr>
 
-         <tr>
-            <td>
-              <td>{{$todo->created_at}}</td>             
-              <input type="hidden" name="" value="">
-            </td>
+             <td>{{$todo->created_at}}</td>  
+              <form action="" method="post">        
+                @csrf
+               <input type="hidden" name="" value="">
+
+               <td><input type="text" class="" value="{{$todo->content}}" name=""></td>
+
+                <td>
+                  <input type="submit"value="更新">
+                </td>
+              </form>
+
               <td>
-                <td>{{$todo->content}}/td>
-               <input type="text" class="input-update" value="" name="content">
+                <form action="" method="post">
+                   @csrf
+                  <input type="submit" value="消去">
+                </form>
               </td>
-              <td>
-                <td>更新ボタン</td>
-                 <input type="submit" name="" value="更新">          
-              </td>            
-              <td>
-                <td>削除ボタン</td>
-                  <input type="submit" name="" value="削除">                        
-              </td>
-         </tr>
+              
+          </tr>
+             @endforeach
 
       </table>
     </div>
