@@ -33,11 +33,11 @@
           <tr>
 
              <td>{{$todo->created_at}}</td>  
-              <form action="" method="post">        
+              <form action="TodoRequest.php" method="post">        
                 @csrf
                <input type="hidden" name="" value="">
 
-               <td><input type="text" class="" value="{{$todo->content}}" name=""></td>
+               <td><input type="text" class="" value="{{$todo->content}}" name="text"></td>
 
                 <td>
                   <input type="submit"value="更新">
@@ -45,7 +45,7 @@
               </form>
 
               <td>
-                <form action="" method="post">
+                <form action="TodoRequest.php" method="post">
                    @csrf
                   <input type="submit" value="消去">
                 </form>
