@@ -30,30 +30,32 @@
 
         @foreach ($todos as $todo)
         <tr>
-          <td>投稿のidを表示</td>
-          <td>投稿のタスク名を表示</td>
-          <td>投稿の作成日を表示</td>
-          <td>投稿の更新日を表示</td>
+          <td>{{$todo->created_at}}</td>
+          <td>{{$todo->content}}</td>
+          <td>更新ボタン</td>
+          <td>削除ボタン</td>
         </tr>
         @endforeach
 
          <tr>
-            <td>              
+            <td>
+              <td>{{$todo->created_at}}</td>             
               <input type="hidden" name="" value="">
             </td>
               <td>
+                <td>{{$todo->content}}/td>
                <input type="text" class="input-update" value="" name="content">
               </td>
-            <td>
-              <input type="submit" name="" value="">
-              <button class="button-update">更新</button>
-            </td>            
-            <td>
-             <input type="submit" name="" value="">  
-             <button class="button-delete">削除</button>
-            </td>
+              <td>
+                <td>更新ボタン</td>
+                 <input type="submit" name="" value="更新">          
+              </td>            
+              <td>
+                <td>削除ボタン</td>
+                  <input type="submit" name="" value="削除">                        
+              </td>
          </tr>
-         
+
       </table>
     </div>
   </div>
