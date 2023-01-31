@@ -21,8 +21,16 @@ public function create(TodoRequest $request)
     Todo::create($form);
     return redirect('/');
   }
-}
 
+   public function update(TodoRequest $request)
+  {
+    $form = $request->all();
+    unset($form['_token']);
+    Author::where('id', $request->id)->update($form);
+    return redirect('/');
+  }
+  
+}
 
 
  

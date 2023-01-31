@@ -37,7 +37,7 @@
                 @csrf
                <input type="hidden" name="id" value="{{$todo->id}}">
 
-               <td><input type="text" class="" value="{{$todo->content}}" name="text"></td>
+               <td><input type="text" class="" value="{{$todo->content}}" name="content"></td>
 
                 <td>
                   <input type="submit"value="更新">
