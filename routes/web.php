@@ -7,4 +7,4 @@ Route::get('/', [TodoController::class, 'index']);
 
 Route::post('/todos/create', [TodoController::class, 'create']);
 
-Route::post('/todos/create', [TodoController::class, 'update']);
+Route::post('/todos/update', [TodoController::class, 'update']);
