@@ -47,7 +47,7 @@
               <td>
                 <form action="/todos/delete" method="post">
                    @csrf
-                  <input type="submit" value="消去">
+                  <input type="submit" value="削除">
                 </form>
               </td>
               
