@@ -30,7 +30,7 @@ public function create(TodoRequest $request)
     return redirect('/');
   }
 
-   public function delete(TodoRequest $request)
+   public function delete(Request $request)
   {
     $todo = Todo::find($request->id);
     $todo->delete();
