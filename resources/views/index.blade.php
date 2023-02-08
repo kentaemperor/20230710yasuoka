@@ -47,6 +47,8 @@
               <td>
                 <form action="/todos/delete" method="post">
                    @csrf
+                   <input type="hidden" name="id" value="{{$todo->id}}">
+                   
                   <input type="submit" value="削除">
                 </form>
               </td>
