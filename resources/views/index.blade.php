@@ -12,6 +12,13 @@
   <div class="container">
     <div class="card">
       <h1 class="title">Todo List</h1>
+      @if (count($errors) > 0)
+  <ul>
+    @foreach ($errors->all() as $error)
+    <li>{{$error}}</li>
+    @endforeach
+  </ul>
+  @endif
       <div class="todo">
         <form action="/todos/create" method="post">
           @csrf
@@ -48,7 +55,7 @@
                 <form action="/todos/delete" method="post">
                    @csrf
                    <input type="hidden" name="id" value="{{$todo->id}}">
-                   
+
                   <input type="submit" value="削除">
                 </form>
               </td>

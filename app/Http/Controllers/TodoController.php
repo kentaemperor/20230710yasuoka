@@ -22,6 +22,8 @@ public function create(TodoRequest $request)
     return redirect('/');
   }
 
+  
+
    public function update(TodoRequest $request)
   {
     $form = $request->all();
